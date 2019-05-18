@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <form [formGroup]="loginForm" (submit)="onSubmit()" class="mt-5">
+    <h1>Inicio de sesión</h1>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Usuario"
+        formContolName="username"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Contraseña"
+        formControlName="password"
+      />
+    </div>
+    <div class="form-group">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="!loginForm.valid"
+      >
+        Iniciar sesión
+      </button>
+    </div>
+  </form>
+</div>
